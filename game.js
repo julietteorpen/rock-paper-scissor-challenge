@@ -24,7 +24,7 @@ function game(playerChoice, computerChoice) {
   // if player has paper and computer has rock - player wins
   // if player has paper and computer has scissors - player loses
 }
-console.log(game("paper", "paper"));
+// console.log(game("paper", "paper"));
 /**
  * 2. This function should pick the computer's choice
  *    It should randomly return "rock", "paper" or "scissors"
@@ -44,18 +44,16 @@ function randomChoice() {
   // if 2 - rock
   // if 0 - paper
 
-console.log(randomChoice());
+// console.log(randomChoice());
 
 const form = document.querySelector(".rps-radio");
 const input = document.querySelectorAll('input');
-
-// console.dir(input);
 
 form.addEventListener("input", (event) => {
    let answer = event.target.value;
    let computerChoice = randomChoice();
    let stringAns = (game(answer, computerChoice));
-  //  console.dir(output);
+   console.log(computerChoice, stringAns);
    return document.querySelector("output").innerHTML = stringAns;
   //  document.documentElement.innerHTML = "<pre>" +
   //        document.documentElement.innerHTML.replace(/</g,"&lt;") +
